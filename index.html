@@ -5,23 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harvard University</title>
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/favicon.png" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <!-- ========================NAVBAR========================= -->
       <nav>
-        <div class="logo_icon"></div>
+        <div>
+          <img src="img\harvard-logo.png" alt="" />
+        </div>
         <ul class="nav_menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Profile</a></li>
-          <li><a href="#">Achievement</a></li>
-          <li><a href="#">Message Us</a></li>
+          <li><a href="#banner" class="nav_item">Home</a></li>
+          <li><a href="#facilitation" class="nav_item">Our Facilitation</a></li>
+          <li><a href="#achievements" class="nav_item">Achievement</a></li>
+          <li><a href="#message-form" class="nav_item">Message Us</a></li>
         </ul>
       </nav>
       <!-- ========================END OF NAVBAR========================= -->
     </header>
+    <main>
+      <!-- ========================BANNER========================= -->
+      <article id="banner">
+        <header id="welcoming">
+          <h1>Welcome <span id="username"></span> to Harvard</h1>
+        </header>
+        <p class="banner-info">
+          Where world-class faculty, innovative research, and dynamic students
+          come together to advance education and foster change in the world.
+        </p>
+        <div class="banner-carousel">
+          <div class="banner-slide active">
+            <img src="img/banner-1.jpg" alt="banner 1" />
+          </div>
+          <div class="banner-slide">
+            <img src="img/banner-2.jpg" alt="banner 2" />
+          </div>
+          <div class="banner-slide">
+            <img src="img/banner-3.jpg" alt="banner 3" />
+          </div>
+        </div>
+      </article>
+      <!-- ========================END OF BANNER========================= -->
+
+      <!-- ========================FACILITATION========================= -->
+      <section id="facilitation" class="facilitation">
+        <div class="facilitation-container">
+          <h1>Our Facilitation</h1>
+          <div class="facilitation-content">
+            <div class="contents">
+              <img src="img/library.jpg" alt="" />
+              <p>Library</p>
+            </div>
+            <div class="contents">
+              <img src="img/sports.jpg" alt="" />
+              <p>Football Court</p>
+            </div>
+            <div class="contents">
+              <img src="img/swimming.jpg" alt="" />
+              <p>Swimming Pool</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================END OF FACILITATION========================= -->
+
+      <!-- ========================ACHIEVEMENT========================= -->
+      <section id="achievements" class="achievements">
+        <h1>Our Achievements</h1>
+        <div class="achievement-container">
+          <div class="achievement">
+            <h2>1636</h2>
+            <p>The year Harvard was founded</p>
+          </div>
+          <div class="achievement">
+            <h2>21,782</h2>
+            <p>
+              Undergraduate and graduate students in the 2022-23 academic year
+            </p>
+          </div>
+          <div class="achievement">
+            <h2>13,087</h2>
+            <p>
+              Harvard Extension School students in the 2022-23 academic year
+            </p>
+          </div>
+          <div class="achievement">
+            <h2>406</h2>
+            <p>
+              Innovations reported by Harvard researchers in fiscal year 2023
+            </p>
+          </div>
+          <div class="achievement">
+            <h2>$246 million</h2>
+            <p>
+              Institutional need-based grant aid provided to Harvard College
+              students in the 2022-23 academic year
+            </p>
+          </div>
+          <div class="achievement">
+            <h2>400,000+</h2>
+            <p>Alumni worldwide</p>
+          </div>
+        </div>
+      </section>
+      <!-- ========================END OF ACHIEVEMENT========================= -->
+    </main>
+
+    <!-- ========================MESSAGE FORM========================= -->
+    <form action="" id="message-form">
+      <h1>Message Us</h1>
+      <div class="form_container">
+        <div class="form-left">
+          <div class="name">
+            <label for="fname">Name:</label>
+            <input
+              type="text"
+              placeholder="Full Name"
+              id="full-name"
+              name="full-name"
+            />
+          </div>
+
+          <div class="birth_of_date">
+            <label for="fbirth">Date of birth: </label>
+            <input type="date" id="birth-of-date" name="birth-of-date" />
+          </div>
+
+          <div class="gender_container">
+            <label for="fgender">Gender: </label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="fmale">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="fmale">Female</label>
+          </div>
+
+          <div class="message">
+            <label for="fMessage">Message: </label>
+            <textarea
+              placeholder="Type your message"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-right">
+          <div class="current_time">
+            <label for="ftime">Current time:</label>
+            <span id="display-time"></span>
+          </div>
+
+          <div class="name">
+            <label for="fname">Nama:</label>
+            <span id="display-full-name"></span>
+          </div>
+
+          <div class="birth_of_date">
+            <label for="fbirth">Date of birth: </label>
+            <span id="display-birth-of-date"></span>
+          </div>
+
+          <div class="gender_container">
+            <label for="fgender">Gender: </label>
+            <span id="display-gender"></span>
+          </div>
+
+          <div class="message">
+            <label for="fMessage">Message: </label>
+            <span id="display-message-text"></span>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" form="message-form">Submit</button>
+      <!-- <input type="submit" value="Submit" /> -->
+    </form>
+    <!-- ========================END OF MESSAGE FORM========================= -->
+
+    <!-- ========================FOOTER========================= -->
+    <footer>
+      <div class="footer-logo">
+        <img src="img\footer-logo.svg" alt="" />
+      </div>
+      <p>Create by Fulgencia S</p>
+    </footer>
+    <!-- ========================END OF FOOTER========================= -->
+
+    <!-- ========================JAVASCRIPT========================= -->
+    <script src="js/script.js"></script>
   </body>
 </html>
